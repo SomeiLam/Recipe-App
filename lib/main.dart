@@ -70,8 +70,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'DeliMeals',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          accentColor: Colors.amber,
           canvasColor: Color.fromRGBO(255, 254, 229, 1),
           fontFamily: 'Raleway',
           textTheme: ThemeData.light().textTheme.copyWith(
@@ -85,7 +83,9 @@ class _MyAppState extends State<MyApp> {
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'RobotoCondensed',
-              ))),
+              )),
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+              .copyWith(secondary: Colors.amber)),
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
